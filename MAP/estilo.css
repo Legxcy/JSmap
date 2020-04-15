@@ -1,0 +1,143 @@
+
+#map {
+  height: 700px;
+  width: 100%;
+  margin-top: 0;
+}
+.Conteudo{
+  display: block;
+  font: 'Palanquin';
+  position: relative;
+  font: 14px;
+  letter-spacing: 1.5px;
+}
+
+.img{
+  float: right;
+  display: block;
+}
+footer{
+  width: 100%;
+  background-color: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.wrapper{
+  width: 1000px;
+  height: 100px;
+}
+
+*{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+
+}
+
+a:focus, a:hover {
+text-decoration: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;
+}
+
+.navigation {
+  height: 191px;
+  background-color: #ffffff;
+  position: static;
+  top: 0;
+  width: 100%;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.brand {
+  float: left;
+  line-height: 70px;
+  font-size: 1.4em;
+  padding-left: 350px;
+ }
+
+.brand a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  float: left;
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  color: #fff;
+  padding: 0 20px;
+  background: #262626;
+  text-decoration: none;
+  line-height: 70px;
+}
+
+nav ul li a:hover {
+          color: #797070;
+          transition: .4s;
+}
+
+nav ul li a:not(:only-child):after {
+          padding-left: 4px;
+          content: '  ▾'; }
+
+nav ul li ul li {
+  min-width: 160px;
+  }
+
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.footer-main-div{
+    width: 100%;
+    height: 80px;
+    margin: auto;
+    background: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 70px;
+}
+.icons{
+    padding: 0;
+    display: inline-block;
+}
+.bar{
+  background-color: #262626;
+  height: 5px;
+}
+.bar2 h4{
+  align-items: center;
+  box-align: center;
+  position: absolute;
+  
+}
+.wrapper h4{
+  text-align: center;
+  padding-left: 333px;
+  font-weight: 200;
+  font: lato;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<title>Mapa de Projetos de Voluntariado no Seixal</title>
+
+</head>
+
+<body>
+   <link rel="stylesheet" href="CaixaDeTexto.css">
+   <style>
+   #map {
+     height: 500px;
+     width: 100%;
+   }
+   </style>
+
+<div id="map"></div>
+
+<script type="text/javascript">
+
+
+
+// Função inicial
+    function initMap() {
+
+// Posição dos marcadores
+
+ //Rato ADCC
+ var pos = {lat: 38.650046, lng: -9.143014};
+
+
+ // Mapa
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 13,
+      center: {lat: 38.628753, lng: -9.115710}
+        });
+
+ // Markers
+ // Rato
+ var Mark = new google.maps.Marker({
+  position: pos,
+  map: map,
+});
+ 
+ // Rato-adcc
+ var  CaixaDeTexto = '<div id="Conteudo">'+
+  '<h1 id="Titulo" class=j"titulo">Rato - ADCC</h1>'+
+  '<p>A Rato - Associação para a Divulgação Cultural e Científica é uma organização sem fins lucrativos, vocacionada para a promoção de Sociedade de Informação.</p>'+
+  '<p><b>Área do Voluntariado</b>: Área Social, e Área Educativa</p>'+
+  '<p><b>Contactos</b>: <a href="https://rato-adcc.pt" target="_blank">http://rato-adcc.pt/</a>, pelo telemóvel <a href="mailto:voluntariado@rato-adcc.pt">voluntariado@rato-adcc.pt</a> ou então pelo telemóvel +351933778414'+
+  '</div>';
+
+// Centro Paroquial de Bem-Estar Social de Arrentela
+var CaixaDeTexto0 = '<div id="Conteudo">'+
+  '<h1>Centro Paroquial de Bem-Estar Social de Arrentela</h1>'+
+  '<p>O Centro Paroquial de Bem Estar Social de Arrentela, é uma Instituição de Solidariedade Social, propriedade da Igreja Católica da Diocese de Setúbal, Paróquia de Arrentela.</p>'+
+  '<p> <b>Área do Voluntariado:</b> Área Social, e Área Educativa</p>'+
+  '<p><b>Contactos</b>: Centro Comunitário Várias Culturas Uma Só Vida, Praceta Gregório Crispim Oliveira, 1-B, Arrentela<br />Jardim de Infância Pica Pau, Quinta do Álamo - Seixal</p>'+
+  '</div>';
+
+ // CAPA
+  var CaixaDeTexto1  = '<h1>CAPA</h1>'+
+  '<div id="Conteudo">'+
+    '<p>No cumprimento da sua missão, o Centro de Assistência Paroquial de Amora expressa-se num conjunto de valores, objetivos e atuações, apoiando cerca de 2000 utentes, através das respostas sociais “Creche Familiar, Creche, Pré-escolar, CATL e Refeitório Sociocultural, bem como da Cantina Social, no âmbito do Programa de Emergência Alimentar e do Grupo de Intervenção Comunitária (GIC)”.</p>'+
+	  '<p><b>Área do Voluntariado:</b> Área social – distribuição alimentar, organização de donativos apoio no Refeitório Sociocultural;</p>'+
+	  '<p> <b>Contactos</b>: <a href="mailto:geral@capa-amora.pt">geral@capa-amora.pt</a> / Telef.: 212278073 / Telemóvel.: 962232080</p></div>'+
+  '</div>';
+
+
+ //Associação Dá-me a Tua Mão
+  var CaixaDeTexto2 = '<div id="Conteudo">'+
+  '<h1>Associação Dá-me a Tua Mão</h1>'+
+  '<p><b>Área do Voluntariado</b>: distribuição de alimentos a população carenciada e sem-abrigo do concelho do Seixal, quer nas instalações da Associação na Arrentela, quer em voltas diárias com uma carrinha que leva apoio alimentar a população referenciada e sem-abrigo do concelho.</p>'+
+  '<p> <b>Contactos</b>: e-mail: <a href="mailto:adm.dameatuamao@gmail.com">adm.dameatuamao@gmail.com</a> telefone: 962627429 </p>'+
+  '</div>';
+
+//Instituição e Associação de Reformados Pensionistas e Idosos do Fogueteiro
+  var CaixaDeTexto3 = '<div id="Conteudo">'+
+  '<h1>Associação de Reformados Pensionistas e Idosos do Fogueteiro</h1>'+
+  '<p>A associação de Reformados Pensionistas e idosos do Fogueteiro trabalha com um público alvo idoso.</p>'+
+  '<p><b>Contactos</b>: Tel. 212256044 Fax. 212260961 arpifogueteiro@hotmail.com </p>'+
+  '</div>';
+
+//ANPAR-Associação Nacional de Pais e Amigos Ret
+  var CaixaDeTexto4 = '<div id="Conteudo">'+
+  '<h1>ANPAR</h1>'+
+  '<p>A Associação Nacional de Síndrome de Rett procura atuar em vários sectores: educacional, médico, científico e jurídico-social, através da implementação de ações e projetos de carácter informativo.</p>'+
+  '<p><b>Área de voluntariado</b>: </p>'+
+  '<p><b>Contactos</b>: Telf.: 919 467 392 - 211 340 467 / 910 391 911; Email: <a href="mailto:"geral@anpar.pt">geral@anpar.pt</a> ou <a href="mailto:"anparett@gmail.com">anparett@gmail.com</a>; Internet: <a href="www.anpar.pt" target="_blank">www.anpar.pt</a>, <a href="http://rettportugal.blogspot.com" target="_blank">http://rettportugal.blogspot.com</a> ou <a href="https://www.facebook.com/ANPAR.SindromeRett.Portugal">facebook.com/ANPAR.SindromeRett.Portugal</a></p>'+
+  '</div>';
+
+//Aurpi TM - Associação Unitária Reformados Pensionistas Idosos da Torre da Marinha (IPSS)
+ var CaixaDeTexto5 = '<div id="Conteudo">'+
+ '<h1>AURPITM</h1>'+
+ '<p>A Associação Unitária de Reformados, Pensionistas e Idosos da Torre da Marinha dá resposta às necessidades dos 60 utentes do centro de convívio e integra o Grupo de Expressão Dramática.'+
+ '<p><b>Área de voluntariado</b>: </p>'+
+ '<p><b>Contactos</b>: '+
+ '</div>';
+
+ //Janelas
+ var Janela = new google.maps.InfoWindow({
+   content: CaixaDeTexto
+ });
+ var Janela0 = new google.maps.InfoWindow({
+   content: CaixaDeTexto0
+ });
+ var Janela1 = new google.maps.InfoWindow({
+   content: CaixaDeTexto1
+ });
+ var Janela2 = new google.maps.InfoWindow({
+   content: CaixaDeTexto2
+ });
+var Janela3 = new google.maps.InfoWindow({
+  content: CaixaDeTexto3
+ });
+ var Janela4 = new google.maps.InfoWindow({
+   content: CaixaDeTexto4
+ });
+ var Janela5 = new google.maps.InfoWindow({
+   content: CaixaDeTexto5
+ });
+ }
+</script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwHvM7SXcYUX2RampHUp3lBZW38IeWR_s&callback=initMap">
+</script>
+
+</html>
